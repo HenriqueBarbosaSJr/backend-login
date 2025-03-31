@@ -3,7 +3,7 @@ module.exports = {
         const result = await console.log('Servidor Requisitado');
 
         const html = `
-                    <!DOCTYPE html>
+                        <!DOCTYPE html>
                         <html lang="en">
                         <head>
                             <meta charset="UTF-8">
@@ -12,8 +12,13 @@ module.exports = {
                         </head>
                         <body>
                             <h1>Servidor Requisitado !!!</h1>
+                            <p>Rotas</p>
+                            <p>/  - raiz</p>
+                            <p>/user  - listar todos os usuários</p>
+                            <p>/userauth  - autenticação de usuário</p>
+
                         </body>
-                    </html>
+                        </html>
 
                      `
         return res.send(html);
