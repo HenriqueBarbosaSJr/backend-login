@@ -14,8 +14,9 @@ module.exports = {
                             <h1>Servidor Requisitado !!!</h1>
                             <p>Rotas</p>
                             <p>/  - raiz</p>
-                            <p>/user  - listar todos os usuários</p>
-                            <p>/userauth  - autenticação de usuário</p>
+                            <p>/user  - listar todos os usuários (get)  </p>
+                            <p>/user  - Criar usuários (post) </p>
+                            <p>/userauth  - autenticação de usuário (post)</p>
 
                         </body>
                         </html>

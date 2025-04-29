@@ -8,8 +8,8 @@ const routes = express.Router();
 
 
 routes.get('/',raizControllers.raiz);
-routes.get('/user', userControllers.searchUsersAll)
-routes.post('/user',userControllers.create);
+routes.get('/user', authorization , userControllers.searchUsersAll)
+routes.post('/user', authorization, userControllers.create);
 routes.post('/userauth', userControllers.searchUsers);
 
 

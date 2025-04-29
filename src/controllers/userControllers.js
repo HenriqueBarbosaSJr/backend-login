@@ -14,7 +14,7 @@ module.exports={
             
             const result = await knex('clientes').where({ email });
             if (result.length === 1){
-                return res.status(400).send({ erro: 'Email já cadastrtado'});
+                return res.status(400).send({ erro: 'Email já cadastrado'});
             }
             await knex('clientes')
                 .insert({ nome, email, uf, level, password });
@@ -37,14 +37,15 @@ module.exports={
         try {
             const { email } = req.body;
             const { password } = req.body;
-
+            
             if(email == undefined || password == undefined){
                 console.log(('mensagem:Error de requisição - requisição sem email ou senha'));
                 return res.status(401).send({mensagem:'Error de requisição - requisição sem email ou senha'});
             }            
             const [ result ] = await knex('clientes').where({email});
-            console.log(result); // somente para teste do resultado de busca
             
+            console.log(result); // somente para teste do resultado de busca
+
             if (result != undefined ){
                 bcrypt.compare(password, result.password, (err , respok) => {
                     if(err){
